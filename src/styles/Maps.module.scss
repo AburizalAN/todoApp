@@ -1,0 +1,40 @@
+.searchWrapper {
+  position: absolute;
+  background-color: white;
+  display: flex;
+  z-index: 10;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.searchIcon {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: rgb(236, 236, 236);
+  }
+}
+
+.input {
+  padding: 0.5rem;
+  width: 100%;
+  border: none;
+}
+
+.option {
+  background-color: white;
+  text-decoration: none;
+  list-style: none;
+  &_item {
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(228, 228, 228);
+    }
+  }
+}

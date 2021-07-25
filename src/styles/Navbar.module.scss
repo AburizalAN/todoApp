@@ -1,0 +1,33 @@
+.navbar {
+  background-color: rgb(34, 25, 44);
+  background-blend-mode: hard-light;
+  height: 64px;
+}
+
+.sideNav {
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  width: 200px;
+  background-color: rgb(49, 1, 104);
+  padding: 1rem 0.5rem;
+  z-index: 10;
+  transform: translateX(0);
+  transition: .4s;
+  &.close {
+    transform: translateX(-100%);
+  }
+  &_wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.479);
+    position: fixed;
+    top: 0; left: 0;
+  }
+  a {
+    color: #fff;
+    &:hover {
+      color: rgb(188, 181, 255);
+    }
+  }
+}

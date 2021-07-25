@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+input:focus, input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.form-control {
+  border-radius: 0 !important;
+}
