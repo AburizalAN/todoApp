@@ -104,7 +104,11 @@ const Todo = (props) => {
         <div className="row justify-content-center">
           <div className="col-md-8">
             <h1 className={styles.title}>
+<<<<<<< HEAD
               Todo App Main ini branchBaru
+=======
+              Todo App Main ini mau ke branch baru
+>>>>>>> 5f473adc6d8e8bfba5a064725d871cf708710545
             </h1>  
           </div>
         </div>
