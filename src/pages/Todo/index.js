@@ -6,8 +6,9 @@ import { useEffect, useState } from 'react';
 import { TodoActions } from '../../config/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import HeaderFixed from '../../components/HeaderFixed';
+import { analytics } from '../../config/firebase';
 
-const Todo = () => {
+const Todo = (props) => {
 
   const dispatch = useDispatch();
   const { loading, todosGroup } = useSelector(state => state.TodoReducer);
@@ -15,6 +16,9 @@ const Todo = () => {
   const [ todos, setTodos ] = useState({});
   const [ todoId, setTodoId ] = useState(1);
   const [ idUpdate, setIdUpdate ] = useState(null);
+
+  console.log('url', window.location.href);
+  console.log('props', props);
 
   const handleAddTodo = async (e) => {
     e.preventDefault();
@@ -84,6 +88,14 @@ const Todo = () => {
   useEffect(() => {
     dispatch(TodoActions.getTodos())
   }, [dispatch]);
+
+  useEffect(() => {
+    analytics.logEvent('page_view', {
+      page_location: window.location.href,
+      page_path: props?.location?.pathname,
+      page_title: 'todo',
+    })
+  }, [props]);
 
   return (
     <div className="position-relative">
