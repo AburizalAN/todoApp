@@ -104,7 +104,7 @@ const Todo = (props) => {
         <div className="row justify-content-center">
           <div className="col-md-8">
             <h1 className={styles.title}>
-              Todo App
+              Todo App BranchBaru
             </h1>  
           </div>
         </div>
